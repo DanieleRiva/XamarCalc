@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarCalc.MainPage">
+
+    <Grid x:Name="Grid" Padding="5,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Text="=" FontSize="36" TextColor="Black" 
+                Clicked="LightTheme"/>
+
+        <StackLayout Orientation="Vertical" Grid.Column="2" Grid.Row="0">
+            
+            <Button x:Name="bLightTheme" Text="&#x263C;" FontSize="22" TextColor="Black" 
+                Clicked="LightTheme" />
+
+            <Button x:Name="bDarkTheme" Text="&#x263D;" FontSize="22" TextColor="Black" 
+                Clicked="DarkTheme" />
+            
+        </StackLayout>
+        
+        <Button x:Name="bHistory" Text="&#128338;" FontSize="26" Grid.Column="3" 
+                BackgroundColor="White"/>
+
+        <Label x:Name="resultText" FontSize="48" BackgroundColor="White" Text="0"
+              TextColor="Green" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+              LineBreakMode="NoWrap" Grid.ColumnSpan="4" Grid.Row="1"/>
+
+        <Button x:Name="bC" Text="C" Grid.Row="2" Grid.Column="0"
+                BackgroundColor="White" TextColor="Red"
+                FontSize="36" Clicked="OnClear" />
+        <Button x:Name="bPar" Text="( )" Grid.Row="2" Grid.Column="1"
+                BackgroundColor="White" TextColor="Green"
+                FontSize="36" Clicked="OnParenthesis"/>
+        <Button x:Name="bBack" Text="&#x232B;" Grid.Row="2" Grid.Column="2"
+                BackgroundColor="White" TextColor="Green"
+                FontSize="36" Clicked="OnBack"/>
+
+        <Button x:Name="b7" Text="7" Grid.Row="3" Grid.Column="0"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+        <Button x:Name="b8" Text="8" Grid.Row="3" Grid.Column="1"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+        <Button x:Name="b9" Text="9" Grid.Row="3" Grid.Column="2"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+
+        <Button x:Name="b4" Text="4" Grid.Row="4" Grid.Column="0"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+        <Button x:Name="b5" Text="5" Grid.Row="4" Grid.Column="1"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+        <Button x:Name="b6" Text="6" Grid.Row="4" Grid.Column="2"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+
+        <Button x:Name="b1" Text="1" Grid.Row="5" Grid.Column="0"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+        <Button x:Name="b2" Text="2" Grid.Row="5" Grid.Column="1"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+        <Button x:Name="b3" Text="3" Grid.Row="5" Grid.Column="2"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+        
+        <Button x:Name="b0" Text="0" Grid.Row="6" Grid.Column="1"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddNumber" />
+        <Button x:Name="bDec" Text="." Grid.Row="6" Grid.Column="2"
+               BackgroundColor="White" TextColor="Black"
+               FontSize="36" Clicked="OnAddDecimal" />
+        <Button x:Name="bRes" Text="=" Grid.Row="6" Grid.Column="3"
+                BackgroundColor="Green" TextColor="White"
+                FontSize="36" Clicked="OnCalculate" />
+
+        <Button x:Name="bDiv" Text="÷" Grid.Row="2" Grid.Column="3"
+                BackgroundColor="White" TextColor="Green"
+                FontSize="36" Clicked="OnSelectOperator" />
+        <Button x:Name="bMult" Text="&#x00D7;" Grid.Row="3" Grid.Column="3"
+                BackgroundColor="White" TextColor="Green"
+                FontSize="36" Clicked="OnSelectOperator" />
+        <Button x:Name="bSub" Text="-" Grid.Row="4" Grid.Column="3"
+                BackgroundColor="White" TextColor="Green"
+                FontSize="36" Clicked="OnSelectOperator" />
+        <Button x:Name="bAdd" Text="+" Grid.Row="5" Grid.Column="3"
+                BackgroundColor="White" TextColor="Green"
+                FontSize="36" Clicked="OnSelectOperator" />
+        
+
+    </Grid>
+
+</ContentPage>
