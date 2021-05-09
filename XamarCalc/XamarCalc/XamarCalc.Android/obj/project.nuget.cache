@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FXbB6CsTb4BI1C2flzTR/x5gut0xmoltmgGLjEFhdOhKwh3en2U9OD1pSOWmRnAEM8H05MSke2XO7FJsCLWCtQ==",
+  "dgSpecHash": "PvR5d+VKQGdg7DBIvutRNlS6HVu7UQQ5oKXwkb5uuCfapUHVHmYlOMvYobQXpdVaNizAU9hAi/pOHOB3tqx7Aw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
+  "projectFilePath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniele\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",

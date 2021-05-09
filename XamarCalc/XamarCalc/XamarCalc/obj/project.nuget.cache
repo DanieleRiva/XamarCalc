@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DdIjPQkDHlM+A8mlXf6RrF/KWYV6IGf5UrK5fjb93YHwK2RDyvRyQ5KmsTyfrivbSeORZnuHf96LthyiLxyrCg==",
+  "dgSpecHash": "UTv5s7iqGfO6oEPxek4ELSuLkNg2CHNVCiQy5lpOwpO+RvHRlyB1Z9D6valR5GMrboYH1jF+Nm/F9l3biXTL+Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj",
+  "projectFilePath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniele\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Daniele\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

@@ -2149,11 +2149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
       "projectName": "XamarCalc.Android",
-      "projectPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
+      "projectPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
       "packagesPath": "C:\\Users\\Daniele\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc.Android\\obj\\",
+      "outputPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2176,8 +2176,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj": {
-              "projectPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj"
+            "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj": {
+              "projectPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj"
             }
           }
         }

@@ -12,3 +12,17 @@ C:\Users\Daniele\Desktop\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\
 C:\Users\Daniele\Desktop\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\ref\XamarCalc.dll
 C:\Users\Daniele\Desktop\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.pdb
 C:\Users\Daniele\Desktop\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.csprojAssemblyReference.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\bin\Debug\netstandard2.0\XamarCalc.deps.json
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\bin\Debug\netstandard2.0\XamarCalc.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\bin\Debug\netstandard2.0\ref\XamarCalc.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\bin\Debug\netstandard2.0\XamarCalc.pdb
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.csprojAssemblyReference.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.AssemblyInfoInputs.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.AssemblyInfo.cs
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.csproj.CoreCompileInputs.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\ref\XamarCalc.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj": {}
+    "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj": {
+    "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj",
+        "projectUniqueName": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj",
         "projectName": "XamarCalc",
-        "projectPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj",
+        "projectPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc\\XamarCalc.csproj",
         "packagesPath": "C:\\Users\\Daniele\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc\\XamarCalc\\XamarCalc\\obj\\",
+        "outputPath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
