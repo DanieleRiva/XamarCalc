@@ -1150,3 +1150,4 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Newtonsoft.Json.dll

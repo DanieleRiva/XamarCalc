@@ -7,9 +7,32 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using Newtonsoft;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace XamarCalc
 {
+    public class Post
+    {
+        public string expr { get; set; }
+        public int precision { get; set; }
+
+        public override string ToString()
+        {
+            //return "{\n \"expr\": \"" + Expr + "\", \n \"precision\": " + Precision + "\n} ";
+            return "{\"expr\": \"" + expr + "\", \"precision\": " + precision + "} ";
+        }
+    }
+
+    public class Response
+    {
+        public string result { get; set; }
+        public string error { get; set; }
+    }
+
+
+
     public partial class MainPage : ContentPage
     {
         // Phone mode (portait - landscape)
@@ -18,15 +41,21 @@ namespace XamarCalc
 
         // full operation shown on calc screen
         string operation = string.Empty;
+        string finalOperation = string.Empty;
         char lastChar;
         int fontDecrease = 20;
         int maxCharacters = 23;
+        List<string> history = new List<string>();
 
         bool possibleDecimal = true;
 
         // Parenthesis
         int parenthesis = 0;
         bool openPar = true;
+
+        // MathJS Post
+        static readonly HttpClient client = new HttpClient();
+        static string urlPost = "https://api.mathjs.org/v4/";
 
         public MainPage()
         {
@@ -175,7 +204,7 @@ namespace XamarCalc
         {
             operation = string.Empty;
             resultText.Text = "0";
-            
+
             possibleDecimal = true;
 
             openPar = true;
@@ -184,7 +213,7 @@ namespace XamarCalc
             resultText.FontSize = 48;
         }
 
-        private void OnCalculate(object sender, EventArgs e)
+        private async void OnCalculate(object sender, EventArgs e)
         {
             // Send operation to the api
 
@@ -194,8 +223,59 @@ namespace XamarCalc
                 for (int x = parenthesis; x != 0; x--)
                     operation += ")";
 
-            resultText.Text = operation;
+            // Add current operation to history list
+            history.Add(operation);
+
+            // Post on MathJS
+            finalOperation = operation.Replace('÷', '/');
+            finalOperation = finalOperation.Replace('×', '*');
+            finalOperation = finalOperation.Replace(',', '.');
+
+            operation = string.Empty;
+
+            Post newPost = new Post()
+            {
+                expr = finalOperation,
+                precision = 5
+            };
+
+            try
+            {
+                Debug.WriteLine(newPost.ToString());
+                string jsonData = JsonConvert.SerializeObject(newPost);
+
+                // Send post to the server
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(urlPost, content);
+                string jsonResponse = await response.Content.ReadAsStringAsync();
+
+                Response resp = JsonConvert.DeserializeObject<Response>(jsonResponse);
+                resultText.Text = resp.result.Replace('.', ',');
+                operation = resp.result;
+            }
+            catch (HttpRequestException)
+            {
+                resultText.Text = "Errore";
+            }
+
+            //resultText.Text = operation;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //OnOperationChanged()
         //{
