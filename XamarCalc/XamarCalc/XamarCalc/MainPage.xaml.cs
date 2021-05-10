@@ -152,23 +152,28 @@ namespace XamarCalc
                 if (operation.Length > 0)
                     lastChar = operation.ElementAt(operation.Length - 1);
 
-                if (operation.Length == 8)
-                    resultText.FontSize -= fontDecrease;
-
-
                 if (openPar)
                 {
+                    if (operation.Length == 8)
+                        resultText.FontSize -= fontDecrease;
+
                     operation += "(";
                     resultText.Text = operation;
 
                     parenthesis += 1;
                 }
-                else if (parenthesis > 0)
+                else if (openPar == false && parenthesis > 0)
                 {
+                    if (operation.Length == 8)
+                        resultText.FontSize -= fontDecrease;
+
                     operation += ")";
                     resultText.Text = operation;
 
                     parenthesis -= 1;
+
+                    if (parenthesis == 0)
+                        openPar = true;
                 }
             }
         }
@@ -185,6 +190,11 @@ namespace XamarCalc
                 else if (operation.EndsWith(")"))
                 {
                     parenthesis += 1;
+                    openPar = false;
+                }
+                else if (operation.EndsWith("("))
+                {
+                    parenthesis -= 1;
                     openPar = true;
                 }
 
