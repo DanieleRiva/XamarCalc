@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:XamarCalc.XAML"
+            x:Name="shellName"
+            x:Class="XamarCalc.MainPage"
+            BackgroundColor="MediumSlateBlue">
+
+    <Shell.FlyoutHeader>
+        <local:HeaderContentView/>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="XamarCalc"
+                Shell.TabBarIsVisible="False"
+                FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Title="Calcolatrice Standard" Icon="standardCalc.png" IsTabStop="True" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+        <ShellContent Title="Calcolatrice Scientifica" Icon="scientCalc.png" IsTabStop="True" ContentTemplate="{DataTemplate local:ScientificCalculator}"/>
+        <ShellContent Title="Calcolatrice da Programmatore" Icon="programmersCalc.png" IsTabStop="True" ContentTemplate="{DataTemplate local:ProgrammersCalculator}"/>
+        <ShellContent Title="Convertitore" Icon="converter.png" IsTabStop="True" ContentTemplate="{DataTemplate local:ConverterCalculator}"/>
+
+    </FlyoutItem>
+
+    <ShellContent Title="About" Icon="history.png" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+
+</Shell>

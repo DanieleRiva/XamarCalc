@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             HeightRequest="170"
+             
+             x:Class="XamarCalc.XAML.HeaderContentView">
+
+    <ContentView.Content>
+
+        <Grid HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Aspect="AspectFill" Source="header.png" Grid.ColumnSpan="5"
+                   Grid.RowSpan="4" Opacity="0.8"/>
+            <Image Source="icon.png" HeightRequest="80" WidthRequest="80"
+                   Grid.Column="1" Grid.Row="1" HorizontalOptions="Start"
+                   VerticalOptions="End"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1" Margin="10, 0, 0, 0"
+                         Grid.Column="2" Grid.ColumnSpan="3" Orientation="Vertical">
+
+                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Yellow"
+                       Text="XamarCalc" FontSize="30"/>
+
+                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Yellow"
+                       Text="Daniele Riva" FontSize="20"/>
+
+                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="DodgerBlue"
+                       Text="daniele.riva@issgreppi.it" TextDecorations="Underline"/>
+
+            </StackLayout>
+
+        </Grid>
+
+    </ContentView.Content>
+
+</ContentView>

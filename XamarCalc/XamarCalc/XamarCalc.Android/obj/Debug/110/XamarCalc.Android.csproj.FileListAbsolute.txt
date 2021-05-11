@@ -574,15 +574,8 @@ C:\Users\Daniele\Desktop\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\sta
 C:\Users\Daniele\Desktop\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\Daniele\Desktop\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Daniele\Desktop\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\XamarCalc.Android.dll
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\XamarCalc.Android.pdb
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc.apk
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc.aab
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc-Signed.aab
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc-Signed.apk
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc-Signed.apk.idsig
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\XamarCalc.dll
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\XamarCalc.pdb
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Mono.Android.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\build.props
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\adb.props
@@ -609,6 +602,15 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\R.txt
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\R.cs.flag
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\XamarCalc.Android.csproj.CoreCompileInputs.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\XamarCalc.Android.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\XamarCalc.Android.pdb
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc.apk
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc.aab
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc-Signed.aab
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc-Signed.apk
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\com.companyname.xamarcalc-Signed.apk.idsig
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\XamarCalc.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\bin\Debug\XamarCalc.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\XamarCalc.Android.csproj.CopyComplete
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\XamarCalc.Android.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\XamarCalc.Android.pdb
@@ -635,13 +637,13 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\FormsViewGroup.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\FormsViewGroup.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Java.Interop.dll
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Mono.Android.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Mono.Android.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Mono.Security.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Mono.Security.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\mscorlib.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\mscorlib.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\netstandard.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Newtonsoft.Json.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\System.ComponentModel.Composition.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\System.ComponentModel.Composition.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\System.Core.dll
@@ -771,7 +773,6 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.Essentials.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.Forms.Core.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.Forms.Core.pdb
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.Forms.Platform.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.Forms.Xaml.dll
@@ -1150,4 +1151,10 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Newtonsoft.Json.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\scientcalc.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\converter.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\history.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\header.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\icon.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\standardcalc.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\programmerscalc.png

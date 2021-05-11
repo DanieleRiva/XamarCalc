@@ -1,4 +1,5 @@
 ﻿using System;
+using XamarCalc.XAML;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
