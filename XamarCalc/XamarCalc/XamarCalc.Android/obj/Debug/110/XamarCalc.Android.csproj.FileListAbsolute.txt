@@ -1154,7 +1154,9 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\scientcalc.png
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\converter.png
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\history.png
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\header.png
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\icon.png
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\standardcalc.png
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\programmerscalc.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\convertarrow.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\header4.jfif
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\battery.png

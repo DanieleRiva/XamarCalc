@@ -1,18 +1,248 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarCalc.XAML.ConverterCalculator">
+             x:Class="XamarCalc.XAML.ConverterCalculator"
+             Title="Convertitore">
 
-    <Grid>
+    <Grid x:Name="Grid">
         
         <Grid.RowDefinitions>
-            
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
+        <Picker x:Name="typePicker" TextColor="Black" Grid.Row="0" Margin="0, 25, 0, 0"
+                HorizontalTextAlignment="Center" FontSize="30" SelectedIndexChanged="OnChangedType" 
+                WidthRequest="10" Title="Scegli conversione">
 
-        </Grid.ColumnDefinitions>
-        
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Lunghezza</x:String>
+                    <x:String>Peso</x:String>
+                    <x:String>Capacità</x:String>
+                    <x:String>Tempo</x:String>
+                    <x:String>Temperatura</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+
+        </Picker>
+
+        <Grid Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="fromEntry" Keyboard="Numeric"  Grid.Row="0"
+                   Grid.Column="0" FontSize="20" MaxLength="9" HorizontalTextAlignment="Center"
+                   Placeholder="Dato..." HorizontalOptions="Fill" Margin="5, 0, 0, 0" TextChanged="OnFromEntryChanged"
+                   IsVisible="False"/>
+
+            <ImageButton x:Name="convertButton" Grid.Column="1" Grid.Row="1" 
+                         Source="convertArrow.png" BackgroundColor="LightGray"
+                         BorderColor="Green" BorderWidth="3" WidthRequest="50" HeightRequest="50"
+                         HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnConvert"
+                         IsEnabled="False" IsVisible="False"/>
+
+            <Entry x:Name="toEntry" Keyboard="Numeric" Grid.Row="0" TextColor="Green"
+                   Grid.Column="2" FontSize="20" MaxLength="9" HorizontalTextAlignment="Center"
+                   IsReadOnly="True" HorizontalOptions="Fill" Margin="0, 0, 5, 0"
+                   IsVisible="False"/>
+
+            <!--<ImageButton x:Name="convertButton2" Grid.Column="0" Grid.Row="1" 
+                         Source="convertArrow.png" BackgroundColor="Transparent"
+                         BorderColor="Green" BorderWidth="1" WidthRequest="50" HeightRequest="50"
+                         HorizontalOptions="Center" VerticalOptions="Center"/>-->
+
+            <!-- LENGTH PICKERS -->
+            <Picker x:Name="lengthFromPicker" StyleId="1" TextColor="Black" Grid.Row="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="5, -100, 0, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>km</x:String>
+                        <x:String>hm</x:String>
+                        <x:String>dam</x:String>
+                        <x:String>m</x:String>
+                        <x:String>dm</x:String>
+                        <x:String>cm</x:String>
+                        <x:String>mm</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <Picker x:Name="lengthToPicker" StyleId="2" TextColor="Black" Grid.Row="2" Grid.Column="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="0, -100, 5, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>km</x:String>
+                        <x:String>hm</x:String>
+                        <x:String>dam</x:String>
+                        <x:String>m</x:String>
+                        <x:String>dm</x:String>
+                        <x:String>cm</x:String>
+                        <x:String>mm</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <!-- WEIGTH PICKERS -->
+            <Picker x:Name="weightFromPicker" StyleId="3" TextColor="Black" Grid.Row="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="5, -100, 0, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>kg</x:String>
+                        <x:String>hg</x:String>
+                        <x:String>dag</x:String>
+                        <x:String>g</x:String>
+                        <x:String>dg</x:String>
+                        <x:String>cg</x:String>
+                        <x:String>mg</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <Picker x:Name="weightToPicker" StyleId="4" TextColor="Black" Grid.Row="2" Grid.Column="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="0, -100, 5, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>kg</x:String>
+                        <x:String>hg</x:String>
+                        <x:String>dag</x:String>
+                        <x:String>g</x:String>
+                        <x:String>dg</x:String>
+                        <x:String>cg</x:String>
+                        <x:String>mg</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+            
+            <!-- CAPACITY PICKERS -->
+            <Picker x:Name="capacityFromPicker" StyleId="5" TextColor="Black" Grid.Row="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="5, -100, 0, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>kl</x:String>
+                        <x:String>hl</x:String>
+                        <x:String>dal</x:String>
+                        <x:String>l</x:String>
+                        <x:String>dl</x:String>
+                        <x:String>cl</x:String>
+                        <x:String>ml</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <Picker x:Name="capacityToPicker" StyleId="6" TextColor="Black" Grid.Row="2" Grid.Column="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="0, -100, 5, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>kl</x:String>
+                        <x:String>hl</x:String>
+                        <x:String>dal</x:String>
+                        <x:String>l</x:String>
+                        <x:String>dl</x:String>
+                        <x:String>cl</x:String>
+                        <x:String>ml</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <!-- TIME PICKERS -->
+            <Picker x:Name="timeFromPicker" StyleId="7" TextColor="Black" Grid.Row="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="5, -100, 0, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Anni</x:String>
+                        <x:String>Mesi</x:String>
+                        <x:String>Settimane</x:String>
+                        <x:String>Giorni</x:String>
+                        <x:String>Ore</x:String>
+                        <x:String>Minuti</x:String>
+                        <x:String>Secondi</x:String>
+                        <x:String>Millisecondi</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <Picker x:Name="timeToPicker" StyleId="8" TextColor="Black" Grid.Row="2" Grid.Column="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="0, -100, 5, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Anni</x:String>
+                        <x:String>Mesi</x:String>
+                        <x:String>Settimane</x:String>
+                        <x:String>Giorni</x:String>
+                        <x:String>Ore</x:String>
+                        <x:String>Minuti</x:String>
+                        <x:String>Secondi</x:String>
+                        <x:String>Millisecondi</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+            
+            <!-- TEMPERATURE PICKERS -->
+            <Picker x:Name="tempFromPicker" StyleId="9" TextColor="Black" Grid.Row="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="5, -100, 0, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>C°</x:String>
+                        <x:String>F°</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <Picker x:Name="tempToPicker" StyleId="10" TextColor="Black" Grid.Row="2" Grid.Column="2"
+                HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
+                WidthRequest="10" Margin="0, -100, 5, 0" IsVisible="False" Title="Scegli unità">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>C°</x:String>
+                        <x:String>F°</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+            
+        </Grid>
+
     </Grid>
+
     
+
 </ContentPage>

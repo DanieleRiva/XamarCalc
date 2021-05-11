@@ -23,18 +23,9 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <StackLayout Orientation="Vertical" Grid.Column="2" Grid.Row="0">
-
-            <Button x:Name="bLightTheme" Text="&#x263C;" FontSize="22" TextColor="Black" 
-                Clicked="LightTheme" IsVisible="false" />
-
-            <Button x:Name="bDarkTheme" Text="&#x263D;" FontSize="22" TextColor="Black" 
-                Clicked="DarkTheme" IsVisible="false" />
-
-        </StackLayout>
-
-        <Button x:Name="bHistory" Text="&#128338;" FontSize="26" Grid.Column="3" 
-                BackgroundColor="White"/>
+        <ImageButton x:Name="bHistory" WidthRequest="40" HeightRequest="40" 
+               Source="history.png" Grid.Column="3" BackgroundColor="White"
+               HorizontalOptions="End" VerticalOptions="Center"/>
 
         <Label x:Name="resultText" FontSize="48" BackgroundColor="White" Text="0"
               TextColor="Green" HorizontalTextAlignment="End" VerticalTextAlignment="Center"

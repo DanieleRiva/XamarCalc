@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using XamarCalc.CLASSES;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace XamarCalc.XAML
 {
@@ -44,9 +45,9 @@ namespace XamarCalc.XAML
 
             // Synchronize with phone's theme
             if (appTheme == AppTheme.Light || appTheme == AppTheme.Unspecified)
-                LightTheme(null, null);
+                LightTheme();
             else if (appTheme == AppTheme.Dark)
-                DarkTheme(null, null);
+                DarkTheme();
         }
 
         private void OnAddNumber(object sender, EventArgs e)
@@ -250,13 +251,14 @@ namespace XamarCalc.XAML
                 resultText.Text = resp.result.Replace('.', ',');
                 operation = resp.result;
             }
-            catch (HttpRequestException)
+            catch (Exception)
             {
+                operation = string.Empty;
                 resultText.Text = "Errore";
             }
         }
 
-        public void LightTheme(object sender, EventArgs e)
+        public void LightTheme()
         {
             Grid.BackgroundColor = Color.White;
             resultText.BackgroundColor = Color.White;
@@ -296,17 +298,15 @@ namespace XamarCalc.XAML
             bSub.TextColor = Color.Green;
             bRes.BackgroundColor = Color.Green;
             bHistory.BackgroundColor = Color.White;
-            bLightTheme.BackgroundColor = Color.White;
-            bDarkTheme.BackgroundColor = Color.White;
             bDec.BackgroundColor = Color.White;
             bDec.TextColor = Color.Black;
         }
 
-        public void DarkTheme(object sender, EventArgs e)
+        public void DarkTheme()
         {
             Grid.BackgroundColor = Color.Black;
             resultText.BackgroundColor = Color.Black;
-            resultText.TextColor = Color.MediumSlateBlue;
+            resultText.TextColor = Color.Green;
             b0.BackgroundColor = Color.Black;
             b0.TextColor = Color.White;
             b1.BackgroundColor = Color.Black;
@@ -329,21 +329,19 @@ namespace XamarCalc.XAML
             b9.TextColor = Color.White;
             bC.BackgroundColor = Color.Black;
             bPar.BackgroundColor = Color.Black;
-            bPar.TextColor = Color.MediumSlateBlue;
+            bPar.TextColor = Color.Green;
             bBack.BackgroundColor = Color.Black;
-            bBack.TextColor = Color.MediumSlateBlue;
+            bBack.TextColor = Color.Green;
             bDiv.BackgroundColor = Color.Black;
-            bDiv.TextColor = Color.MediumSlateBlue;
+            bDiv.TextColor = Color.Green;
             bMult.BackgroundColor = Color.Black;
-            bMult.TextColor = Color.MediumSlateBlue;
+            bMult.TextColor = Color.Green;
             bAdd.BackgroundColor = Color.Black;
-            bAdd.TextColor = Color.MediumSlateBlue;
+            bAdd.TextColor = Color.Green;
             bSub.BackgroundColor = Color.Black;
-            bSub.TextColor = Color.MediumSlateBlue;
-            bRes.BackgroundColor = Color.MediumSlateBlue;
+            bSub.TextColor = Color.Green;
+            bRes.BackgroundColor = Color.Green;
             bHistory.BackgroundColor = Color.Black;
-            bLightTheme.BackgroundColor = Color.Black;
-            bDarkTheme.BackgroundColor = Color.Black;
             bDec.BackgroundColor = Color.Black;
             bDec.TextColor = Color.White;
         }

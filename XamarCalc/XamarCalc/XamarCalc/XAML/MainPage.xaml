@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-            xmlns:local="clr-namespace:XamarCalc.XAML"
-            x:Name="shellName"
-            x:Class="XamarCalc.MainPage"
-            BackgroundColor="MediumSlateBlue">
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+       xmlns:local="clr-namespace:XamarCalc.XAML"
+       x:Name="shellName"
+       x:Class="XamarCalc.MainPage">
 
     <Shell.FlyoutHeader>
         <local:HeaderContentView/>
@@ -18,9 +17,15 @@
         <ShellContent Title="Calcolatrice Scientifica" Icon="scientCalc.png" IsTabStop="True" ContentTemplate="{DataTemplate local:ScientificCalculator}"/>
         <ShellContent Title="Calcolatrice da Programmatore" Icon="programmersCalc.png" IsTabStop="True" ContentTemplate="{DataTemplate local:ProgrammersCalculator}"/>
         <ShellContent Title="Convertitore" Icon="converter.png" IsTabStop="True" ContentTemplate="{DataTemplate local:ConverterCalculator}"/>
-
+        <ShellContent Title="" Icon="" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+        <ShellContent Title="" Icon="" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+        <ShellContent Title="" Icon="" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+        <ShellContent Title="" Icon="" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+        <ShellContent Title="" Icon="" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+        <ShellContent Title="" Icon="" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+        
     </FlyoutItem>
 
-    <ShellContent Title="About" Icon="history.png" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
+    <ShellContent Title="Version 1.0" Icon="battery.png" ContentTemplate="{DataTemplate local:StandardCalculator}"/>
 
 </Shell>

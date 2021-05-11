@@ -2,7 +2,6 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              HeightRequest="170"
-             
              x:Class="XamarCalc.XAML.HeaderContentView">
 
     <ContentView.Content>
@@ -23,8 +22,8 @@
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
 
-            <Image Aspect="AspectFill" Source="header.png" Grid.ColumnSpan="5"
-                   Grid.RowSpan="4" Opacity="0.8"/>
+            <Image Aspect="AspectFill" Source="header4.jfif" Grid.ColumnSpan="5"
+                   Grid.RowSpan="4"/>
             <Image Source="icon.png" HeightRequest="80" WidthRequest="80"
                    Grid.Column="1" Grid.Row="1" HorizontalOptions="Start"
                    VerticalOptions="End"/>
@@ -32,11 +31,11 @@
             <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1" Margin="10, 0, 0, 0"
                          Grid.Column="2" Grid.ColumnSpan="3" Orientation="Vertical">
 
-                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Yellow"
+                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Red"
                        Text="XamarCalc" FontSize="30"/>
 
-                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Yellow"
-                       Text="Daniele Riva" FontSize="20"/>
+                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="Red"
+                       Text="Daniele Riva" FontSize="15"/>
 
                 <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="DodgerBlue"
                        Text="daniele.riva@issgreppi.it" TextDecorations="Underline"/>
