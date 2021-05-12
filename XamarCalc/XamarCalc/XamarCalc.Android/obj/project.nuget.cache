@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R6aoX160tsCo86gGnG5ZDHI6nbahq/oqLD0rG3VGaEKkfzujdNsWOc5Ud59ZMMRN8kro0qRkldBx6j0zIDIM3w==",
+  "dgSpecHash": "v9Th2VZiSZnrPgJkTpsqjnvbWA/A1W+bZjvmwzmt9Ti7bwAufLXJhEWG38cHsuhZg9ufEgmohkyWjGnisOP9nA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
+  "projectFilePath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git - Copia\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniele\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Daniele\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
@@ -50,6 +50,7 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.versionedparcelable\\1.1.1.6\\xamarin.androidx.versionedparcelable.1.1.1.6.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.viewpager\\1.0.0.6\\xamarin.androidx.viewpager.1.0.0.6.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.viewpager2\\1.0.0.8\\xamarin.androidx.viewpager2.1.0.0.8.nupkg.sha512",
+    "C:\\Users\\Daniele\\.nuget\\packages\\xamarin.communitytoolkit\\1.1.0\\xamarin.communitytoolkit.1.1.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.android.material\\1.2.1.1\\xamarin.google.android.material.1.2.1.1.nupkg.sha512",

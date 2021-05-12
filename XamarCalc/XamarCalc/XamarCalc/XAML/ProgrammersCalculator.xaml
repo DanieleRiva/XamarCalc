@@ -1,14 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="XamarCalc.XAML.ProgrammersCalculator">
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-    
+
+    <xct:TabView Padding="5,0" Grid.Row="3" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3" TabIndicatorWidth="10" TabStripHeight="120">
+        <xct:TabViewItem Text="Standard" BackgroundColor="Green" TextColorSelected="Yellow" Icon="standardCalc.png">
+            <xct:TabViewItem.Content>
+
+                <Grid BackgroundColor="white">
+
+                        <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button x:Name="b7" Text="7" Grid.Row="1" Grid.Column="0"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36"  />
+                        <Button x:Name="b8" Text="8" Grid.Row="1" Grid.Column="1"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36"  />
+                        <Button x:Name="b9" Text="9" Grid.Row="1" Grid.Column="2"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36" />
+
+                        <Button x:Name="b4" Text="4" Grid.Row="2" Grid.Column="0"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36" />
+                        <Button x:Name="b5" Text="5" Grid.Row="2" Grid.Column="1"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36"  />
+                        <Button x:Name="b6" Text="6" Grid.Row="2" Grid.Column="2"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36"  />
+
+                        <Button x:Name="b1" Text="1" Grid.Row="3" Grid.Column="0"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36"  />
+                        <Button x:Name="b2" Text="2" Grid.Row="3" Grid.Column="1"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36" />
+                        <Button x:Name="b3" Text="3" Grid.Row="3" Grid.Column="2"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36"/>
+
+                        <Button x:Name="b0" Text="0" Grid.Row="3" Grid.Column="1"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36"  />
+                        <Button x:Name="bDec" Text="." Grid.Row="3" Grid.Column="2"
+                                    BackgroundColor="White" TextColor="Black"
+                                    FontSize="36" />
+
+                    </Grid>
+
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+
+        <xct:TabViewItem Text="Scientifica" BackgroundColor="Red" TextColorSelected="Yellow">
+            <xct:TabViewItem.Content>
+                <StackLayout>
+                    <Label x:Name="Prova" FontSize="48" BackgroundColor="White" Text="CIAO!"
+                               TextColor="Green" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                               LineBreakMode="NoWrap" Grid.ColumnSpan="4" Grid.Row="1"/>
+                </StackLayout>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+
+    </xct:TabView>
+
 </ContentPage>
