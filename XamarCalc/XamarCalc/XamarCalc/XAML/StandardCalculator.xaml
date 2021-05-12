@@ -5,48 +5,108 @@
              x:Class="XamarCalc.XAML.StandardCalculator"
              Title="Calcolatrice">
 
-    <Grid x:Name="Grid" Padding="5,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="White">
+        <Grid x:Name="Grid" Padding="5,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="White">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-        <Label x:Name="resultText" FontSize="48" BackgroundColor="White" Text="0"
-               TextColor="Green" HorizontalTextAlignment="End" VerticalTextAlignment="Start"
-               LineBreakMode="NoWrap" Grid.ColumnSpan="4" Grid.Row="0" Margin="0, 40, 0, 0"/>
+            <Label x:Name="resultText" FontSize="48" BackgroundColor="White" Text="0"
+                   TextColor="Green" HorizontalTextAlignment="End" VerticalTextAlignment="Start"
+                   LineBreakMode="NoWrap" Grid.ColumnSpan="4" Grid.Row="0" Margin="0, 40, 0, 0"/>
 
-        <ImageButton x:Name="bHistory" WidthRequest="35" HeightRequest="35" 
-                     Source="history.png" Grid.Column="3" Grid.Row="0" BackgroundColor="White"
-                     HorizontalOptions="Center" VerticalOptions="End" Margin="0, 0, 0, 10"/>
+            <ImageButton x:Name="bHistory" WidthRequest="35" HeightRequest="35" 
+                         Source="history.png" Grid.Column="3" Grid.Row="0" BackgroundColor="White"
+                         HorizontalOptions="Center" VerticalOptions="End" Margin="0, 0, 0, 10"/>
 
-        <Button x:Name="bC" Text="C" Grid.Row="1" Grid.Column="0"
-                BackgroundColor="White" TextColor="Red"
-                FontSize="36" Clicked="OnClear" />
-        <Button x:Name="bPar" Text="( )" Grid.Row="1" Grid.Column="1"
-                BackgroundColor="White" TextColor="Green"
-                FontSize="36" Clicked="OnParenthesis"/>
-        <Button x:Name="bBack" Text="&#x232B;" Grid.Row="1" Grid.Column="2"
-                BackgroundColor="White" TextColor="Green"
-                FontSize="36" Clicked="OnBack"/>
+            <Button x:Name="bC" Text="C" Grid.Row="1" Grid.Column="0"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" Clicked="OnClear" />
+            <Button x:Name="bPar" Text="( )" Grid.Row="1" Grid.Column="1"
+                    BackgroundColor="White" TextColor="Green"
+                    FontSize="36" Clicked="OnParenthesis"/>
+            <Button x:Name="bBack" Text="&#x232B;" Grid.Row="1" Grid.Column="2"
+                    BackgroundColor="White" TextColor="Green"
+                    FontSize="36" Clicked="OnBack"/>
 
-        <xct:TabView Padding="5,0" Grid.Row="2" TabStripBorderColor="Green" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="3">
-            <xct:TabViewItem Text="Standard" TextColorSelected="Red">
-                <xct:TabViewItem.Content>
+            <xct:TabView Padding="5,0" Grid.Row="2" TabStripBorderColor="Green" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="3">
+            <xct:TabViewItem Text="Standard" TextColorSelected="Red" FontAttributes="Bold" FontSizeSelected="18">
+                    <xct:TabViewItem.Content>
 
-                    <Grid x:Name="innerGrid" Padding="5,0" RowSpacing="1" ColumnSpacing="1" Grid.Row="3" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3">
+                        <Grid x:Name="innerGrid" Padding="5,0" RowSpacing="1" ColumnSpacing="1" Grid.Row="3" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3">
                             
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                            
+                                <Button x:Name="b7" Text="7" Grid.Row="0" Grid.Column="0"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+                                <Button x:Name="b8" Text="8" Grid.Row="0" Grid.Column="1"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+                                <Button x:Name="b9" Text="9" Grid.Row="0" Grid.Column="2"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+
+                                <Button x:Name="b4" Text="4" Grid.Row="1" Grid.Column="0"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+                                <Button x:Name="b5" Text="5" Grid.Row="1" Grid.Column="1"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+                                <Button x:Name="b6" Text="6" Grid.Row="1" Grid.Column="2"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+
+                                <Button x:Name="b1" Text="1" Grid.Row="2" Grid.Column="0"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+                                <Button x:Name="b2" Text="2" Grid.Row="2" Grid.Column="1"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+                                <Button x:Name="b3" Text="3" Grid.Row="2" Grid.Column="2"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+
+                                <Button x:Name="b0" Text="0" Grid.Row="3" Grid.Column="1"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddNumber" />
+                                <Button x:Name="bDec" Text="." Grid.Row="3" Grid.Column="2"
+                                        BackgroundColor="White" TextColor="Black"
+                                        FontSize="36" Clicked="OnAddDecimal" />
+
+                            </Grid>
+                        
+                    </xct:TabViewItem.Content>
+                </xct:TabViewItem>
+
+            <xct:TabViewItem Text="Scientifica" TextColorSelected="Red" FontAttributes="Bold" FontSizeSelected="18">
+                    <xct:TabViewItem.Content>
+                    
+                        <Grid x:Name="innerGridScience" Padding="5,0" RowSpacing="1" ColumnSpacing="1" Grid.Row="3" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3">
+
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
@@ -59,76 +119,71 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            
-                            <Button x:Name="b7" Text="7" Grid.Row="0" Grid.Column="0"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-                            <Button x:Name="b8" Text="8" Grid.Row="0" Grid.Column="1"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-                            <Button x:Name="b9" Text="9" Grid.Row="0" Grid.Column="2"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-
-                            <Button x:Name="b4" Text="4" Grid.Row="1" Grid.Column="0"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-                            <Button x:Name="b5" Text="5" Grid.Row="1" Grid.Column="1"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-                            <Button x:Name="b6" Text="6" Grid.Row="1" Grid.Column="2"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-
-                            <Button x:Name="b1" Text="1" Grid.Row="2" Grid.Column="0"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-                            <Button x:Name="b2" Text="2" Grid.Row="2" Grid.Column="1"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-                            <Button x:Name="b3" Text="3" Grid.Row="2" Grid.Column="2"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-
-                            <Button x:Name="b0" Text="0" Grid.Row="3" Grid.Column="1"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddNumber" />
-                            <Button x:Name="bDec" Text="." Grid.Row="3" Grid.Column="2"
-                                    BackgroundColor="White" TextColor="Black"
-                                    FontSize="36" Clicked="OnAddDecimal" />
-
-                        </Grid>
                         
-                </xct:TabViewItem.Content>
-            </xct:TabViewItem>
+                            <Button x:Name="bSin" Text="sin" Grid.Row="0" Grid.Column="0"
+                                    BackgroundColor="White" TextColor="Black" StyleId="0"
+                                    FontSize="29" Clicked="OnAddScience" />
+                            <Button x:Name="bCos" Text="cos" Grid.Row="0" Grid.Column="1"
+                                    BackgroundColor="White" TextColor="Black" StyleId="0"
+                                    FontSize="29" Clicked="OnAddScience" />
+                            <Button x:Name="bTan" Text="tan" Grid.Row="0" Grid.Column="2"
+                                    BackgroundColor="White" TextColor="Black" StyleId="0"
+                                    FontSize="29" Clicked="OnAddScience" />
 
-            <xct:TabViewItem Text="Scientifica" TextColorSelected="Red">
-                <xct:TabViewItem.Content>
-                    <StackLayout>
-                        <Label x:Name="Prova" FontSize="48" BackgroundColor="White" Text="Scientifica ma non ancora :)"
-                               TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                               LineBreakMode="CharacterWrap" Grid.ColumnSpan="4" Grid.Row="1"/>
-                    </StackLayout>
-                </xct:TabViewItem.Content>
-            </xct:TabViewItem>
+                            <Button x:Name="bPow" Text="x^&#x00B2;" Grid.Row="1" Grid.Column="0"
+                                    BackgroundColor="White" TextColor="Black" StyleId="1"
+                                    FontSize="29" Clicked="OnAddScience" />
+                            <Button x:Name="bPowy" Text="x^&#x02B8;" Grid.Row="1" Grid.Column="1"
+                                    BackgroundColor="White" TextColor="Black" StyleId="2"
+                                    FontSize="29" Clicked="OnAddScience" />
+                            <Button x:Name="bSqrt" Text="&#x221A;" Grid.Row="1" Grid.Column="2"
+                                    BackgroundColor="White" TextColor="Black" StyleId="3"
+                                    FontSize="29" Clicked="OnAddScience" />
 
-        </xct:TabView>
 
-        <Button x:Name="bDiv" Text="÷" Grid.Row="1" Grid.Column="3"
-                BackgroundColor="White" TextColor="Green"
-                FontSize="36" Clicked="OnAddOperator" />
-        <Button x:Name="bMult" Text="&#x00D7;" Grid.Row="2" Grid.Column="3"
-                BackgroundColor="White" TextColor="Green"
-                FontSize="36" Clicked="OnAddOperator" />
-        <Button x:Name="bSub" Text="-" Grid.Row="3" Grid.Column="3"
-                BackgroundColor="White" TextColor="Green"
-                FontSize="36" Clicked="OnAddOperator" />
-        <Button x:Name="bAdd" Text="+" Grid.Row="4" Grid.Column="3"
-                BackgroundColor="White" TextColor="Green"
-                FontSize="36" Clicked="OnAddOperator" />
-        <Button x:Name="bRes" Text="=" Grid.Row="5" Grid.Column="3"
-                BackgroundColor="Green" TextColor="White"
-                FontSize="36" Clicked="OnCalculate" />
+                            <Button x:Name="bLog" Text="log" Grid.Row="2" Grid.Column="0"
+                                    BackgroundColor="White" TextColor="Black" StyleId="0"
+                                    FontSize="29" Clicked="OnAddScience" />
+                            <Button x:Name="bLog2" Text="log&#x2082;" Grid.Row="2" Grid.Column="1"
+                                    BackgroundColor="White" TextColor="Black" StyleId="4"
+                                    FontSize="29" Clicked="OnAddScience" />
+                            <Button x:Name="bLn" Text="ln" Grid.Row="2" Grid.Column="2"
+                                    BackgroundColor="White" TextColor="Black" StyleId="0"
+                                    FontSize="29" Clicked="OnAddScience" />
+
+
+                            <Button x:Name="bE" Text="e" Grid.Row="3" Grid.Column="0"
+                                    BackgroundColor="White" TextColor="Black" StyleId="0"
+                                    FontSize="29" Clicked="OnAddNumber" />
+                            <Button x:Name="bFatt" Text="!" Grid.Row="3" Grid.Column="1"
+                                    BackgroundColor="White" TextColor="Black" StyleId="0"
+                                    FontSize="29" Clicked="OnAddScience" />
+                            <Button x:Name="bPi" Text="&#x1D70B;" Grid.Row="3" Grid.Column="2"
+                                    BackgroundColor="White" TextColor="Black" StyleId="0"
+                                    FontSize="29" Clicked="OnAddNumber" />
+
+                    </Grid>
+                    
+                    </xct:TabViewItem.Content>
+                </xct:TabViewItem>
+
+            </xct:TabView>
+
+            <Button x:Name="bDiv" Text="÷" Grid.Row="1" Grid.Column="3"
+                    BackgroundColor="White" TextColor="Green"
+                    FontSize="36" Clicked="OnAddOperator" />
+            <Button x:Name="bMult" Text="&#x00D7;" Grid.Row="2" Grid.Column="3"
+                    BackgroundColor="White" TextColor="Green"
+                    FontSize="36" Clicked="OnAddOperator" />
+            <Button x:Name="bSub" Text="-" Grid.Row="3" Grid.Column="3"
+                    BackgroundColor="White" TextColor="Green"
+                    FontSize="36" Clicked="OnAddOperator" />
+            <Button x:Name="bAdd" Text="+" Grid.Row="4" Grid.Column="3"
+                    BackgroundColor="White" TextColor="Green"
+                    FontSize="36" Clicked="OnAddOperator" />
+            <Button x:Name="bRes" Text="=" Grid.Row="5" Grid.Column="3"
+                    BackgroundColor="Green" TextColor="White"
+                    FontSize="36" Clicked="OnCalculate" />
 
     </Grid>
 

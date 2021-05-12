@@ -584,21 +584,13 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res.flag
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\44\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\45\jl\files.cache
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\51\jl\files.cache
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\54\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\55\jl\files.cache
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\62\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\63\jl\files.cache
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\67\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\68\jl\files.cache
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\70\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\71\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\72\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\73\jl\files.cache
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\75\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\76\jl\files.cache
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\79\jl\files.cache
-C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\87\jl\files.cache
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\R.txt
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\R.cs.flag
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\XamarCalc.Android.csproj.CoreCompileInputs.cache
@@ -1763,3 +1755,28 @@ C:\Users\Daniele\Desktop\XamarCalc Git - Copia\XamarCalc\XamarCalc\XamarCalc.And
 C:\Users\Daniele\Desktop\XamarCalc Git - Copia\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\Daniele\Desktop\XamarCalc Git - Copia\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Daniele\Desktop\XamarCalc Git - Copia\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\46\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\52\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\56\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\64\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\69\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\74\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\77\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\80\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\lp\88\jl\files.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\assets\Xamarin.CommunityToolkit.dll
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\AutoFitTextureView.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\CameraCaptureListener.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\CameraCaptureStateListener.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\CameraFragment.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\CameraStateListener.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\CameraViewRenderer.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\FormsVideoView.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\ImageAvailableListener.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\MediaElementRenderer.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\PopupRenderer.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\SnackBar_SnackBarCallback.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc642e1c7a98bdb5c44a\ThumbFrameRenderer.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc64515ee83f00766c60\PlatformTouchEffect_AccessibilityListener.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc64515ee83f00766c60\VisualFeedbackEffectRouter_FastRendererOnLayoutChangeListener.java
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\android\src\crc645b8ccbad6ecd7dce\SideMenuViewRenderer.java

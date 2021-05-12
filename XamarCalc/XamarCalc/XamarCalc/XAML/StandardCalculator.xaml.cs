@@ -24,14 +24,24 @@ namespace XamarCalc.XAML
         string finalOperation = string.Empty;
         char lastChar;
         int fontDecrease = 20;
-        int maxCharacters = 23;
+        int maxCharacters = 22;
         List<string> history = new List<string>();
 
         bool possibleDecimal = true;
+        char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+        char[] operators = { '+', '-', '×', '÷' };
 
         // Parenthesis
         int parenthesis = 0;
         bool openPar = true;
+        bool onlySub = true;
+        int degPar = 0;
+
+        // Scientific calculator
+        bool usesTrigonometry = false;
+        bool usesLogarithms = false;
+        string logBase = "10";
+        List<string> operationList = new List<string>();
 
         // MathJS Post
         static readonly HttpClient client = new HttpClient();
@@ -60,8 +70,11 @@ namespace XamarCalc.XAML
                     resultText.FontSize -= fontDecrease;
 
                 operation += ((Button)sender).Text;
+                operationList.Add(((Button)sender).Text); // Add to list for scientific calc
                 resultText.Text = operation;
+
                 openPar = false;
+                onlySub = false;
 
                 Debug.WriteLine(operation.Length);
             }
@@ -76,23 +89,35 @@ namespace XamarCalc.XAML
                 if (operation.Length == 8)
                     resultText.FontSize -= fontDecrease;
 
-                if (operation.Length > 0)
+                if (operation.Length > 0 && !onlySub)
                 {
-                    char lastChar = operation.ElementAt(operation.Length - 1);
+                    lastChar = operation.ElementAt(operation.Length - 1);
 
                     if (lastChar.ToString() != ((Button)sender).Text)
                         if (lastChar == '+' || lastChar == '-' || lastChar == '×' || lastChar == '÷')
+                        {
                             operation = operation.Remove(operation.Length - 1, 1) + ((Button)sender).Text;
+
+                            operationList.RemoveAt(operationList.Count - 1); // Replace to list for scientific calc
+                            operationList.Add(((Button)sender).Text);        // 
+                        }
                         else
+                        {
                             operation += ((Button)sender).Text;
+
+                            operationList.Add(((Button)sender).Text); // Add to list for scientific calc
+                        }
 
                     resultText.Text = operation;
                     possibleDecimal = true;
                     openPar = true;
                 }
-                else if (((Button)sender).Text == "-")
+                else if (onlySub && ((Button)sender).Text == "-")
                 {
                     operation += ((Button)sender).Text;
+
+                    operationList.Add(((Button)sender).Text); // Add to list for scientific calc
+
                     resultText.Text = operation;
                     possibleDecimal = true;
                     openPar = true;
@@ -117,12 +142,24 @@ namespace XamarCalc.XAML
 
                         if (lastChar.ToString() != ",")
                             if (lastChar == '+' || lastChar == '-' || lastChar == '×' || lastChar == '÷')
-                                operation = "0,";
+                            {
+                                operation += "0,";
+
+                                operationList.Add("0."); // Add to list for scientific calc
+                            }
                             else
+                            {
                                 operation += ",";
+
+                                operationList.Add("."); // Add to list for scientific calc
+                            }
                     }
                     else
+                    {
                         operation += "0,";
+
+                        operationList.Add("."); // Add to list for scientific calc
+                    }
 
                     resultText.Text = operation;
                     possibleDecimal = false;
@@ -145,6 +182,7 @@ namespace XamarCalc.XAML
                         resultText.FontSize -= fontDecrease;
 
                     operation += "(";
+                    operationList.Add("("); // Add to list for scientific calc
                     resultText.Text = operation;
 
                     parenthesis += 1;
@@ -155,19 +193,183 @@ namespace XamarCalc.XAML
                         resultText.FontSize -= fontDecrease;
 
                     operation += ")";
+                    operationList.Add(")"); // Add to list for scientific calc
                     resultText.Text = operation;
 
                     parenthesis -= 1;
 
                     if (parenthesis == 0)
                         openPar = true;
+                    if (parenthesis == degPar && usesTrigonometry)
+                    {
+                        Debug.WriteLine("ENTRATO");
+                        operationList.Insert(operationList.Count - 1, " deg");
+                        usesTrigonometry = false;
+                    }
+                    else if (parenthesis == degPar && usesLogarithms)
+                    {
+                        operationList.Insert(operationList.Count - 1, $",{logBase}");
+                        usesTrigonometry = false;
+                    }
+                }
+            }
+        }
+
+        private void OnAddScience(object sender, EventArgs e)
+        {
+            if (operation.Length > 0)
+                lastChar = operation.ElementAt(operation.Length - 1);
+
+            Debug.WriteLine(lastChar);
+
+            if (((Button)sender).Text == "sin")
+            {
+                operation += "sin(";
+
+                openPar = true;
+                degPar = parenthesis;
+                parenthesis += 1;
+                usesTrigonometry = true;
+
+                operationList.Add("sin("); // Add to list for scientific cal
+
+                onlySub = true;
+                possibleDecimal = false;
+
+                resultText.Text = operation;
+            }
+            else if (((Button)sender).Text == "cos")
+            {
+                operation += "cos(";
+
+                openPar = true;
+                degPar = parenthesis;
+                parenthesis += 1;
+                usesTrigonometry = true;
+
+                operationList.Add("cos("); // Add to list for scientific cal
+
+                onlySub = true;
+                possibleDecimal = false;
+
+                resultText.Text = operation;
+            }
+            else if (((Button)sender).Text == "tan")
+            {
+                operation += "tan(";
+
+                openPar = true;
+                degPar = parenthesis;
+                parenthesis += 1;
+                usesTrigonometry = true;
+
+                operationList.Add("tan("); // Add to list for scientific cal
+
+                onlySub = true;
+                possibleDecimal = false;
+
+                resultText.Text = operation;
+            }
+            else if (operation.Length > 0 && ((Button)sender).StyleId == "1" && numbers.Contains(lastChar) || lastChar == ')' && ((Button)sender).StyleId == "1") // x^2
+            {
+                Debug.WriteLine("Sono nel ^2");
+
+                operation += "^2";
+
+                usesTrigonometry = false;
+
+                operationList.Add("^2"); // Add to list for scientific cal
+
+                onlySub = false;
+                possibleDecimal = false;
+
+                resultText.Text = operation;
+            }
+            else if (((Button)sender).StyleId == "2" && operation.Length > 0 && numbers.Contains(lastChar) || lastChar == ')' && ((Button)sender).StyleId == "2") // x^y
+            {
+                operation += "^";
+
+                usesTrigonometry = false;
+
+                operationList.Add("^"); // Add to list for scientific cal
+
+                onlySub = true;
+                possibleDecimal = false;
+
+                openPar = true;
+
+                resultText.Text = operation;
+            }
+            else if (((Button)sender).StyleId == "3") // √(
+            {
+                operation += "√(";
+
+                openPar = true;
+                parenthesis += 1;
+                usesTrigonometry = false;
+
+                operationList.Add("sqrt("); // Add to list for scientific cal
+
+                onlySub = true;
+                possibleDecimal = false;
+
+                resultText.Text = operation;
+            }
+            else if (((Button)sender).Text == "log" || ((Button)sender).StyleId == "4")
+            {
+                if (((Button)sender).StyleId == "4")
+                {
+                    operation += "log₂(";
+                    logBase = "2";
+                }
+                else
+                {
+                    operation += "log(";
+                    logBase = "10";
+                }
+
+
+                openPar = true;
+                parenthesis += 1;
+                usesTrigonometry = false;
+                usesLogarithms = true;
+
+                operationList.Add("log("); // Add to list for scientific cal
+
+                onlySub = true;
+                possibleDecimal = false;
+
+                resultText.Text = operation;
+            }
+            else if (((Button)sender).Text == "!" && ((Button)sender).StyleId == "0") // !
+            {
+                if (operation.Length == maxCharacters)
+                    return;
+                else
+                {
+                    if (operation.Length > 0)
+                        lastChar = operation.ElementAt(operation.Length - 1);
+
+                    if (numbers.Contains(lastChar) || lastChar == ')')
+                    {
+                        if (operation.Length == 8)
+                            resultText.FontSize -= fontDecrease;
+
+                        operation += "!";
+                        operationList.Add("!"); // Add to list for scientific cal
+                        resultText.Text = operation;
+                    }
+
+                    openPar = false;
+                    onlySub = false;
+                    possibleDecimal = false;
                 }
             }
         }
 
         private void OnBack(object sender, EventArgs e)
         {
-            if (operation.Length > 0)
+            if (operationList.Count > 0)
             {
                 if (operation.Length == 9)
                     resultText.FontSize += fontDecrease;
@@ -185,7 +387,44 @@ namespace XamarCalc.XAML
                     openPar = true;
                 }
 
-                operation = operation.Remove(operation.Length - 1, 1);
+                int count;
+
+                if (operationList[operationList.Count - 1].Length > 1 && operationList[operationList.Count - 1].ElementAt(operationList[operationList.Count - 1].Length - 2) == 't')
+                    count = 2;
+                else if (operationList[operationList.Count - 1].Length > 1 && operationList[operationList.Count - 1].ElementAt(operationList[operationList.Count - 1].Length - 2) == 'g' && logBase == "2") // If log2 discrepancy with list
+                {
+                    count = 5;
+                    Debug.WriteLine("Count: " + count);
+                    logBase = "10";
+
+                    if (operationList[operationList.Count - 1].Contains(' ') || operationList[operationList.Count - 1].Contains(',')) // prevents deleting discrepancy with list when using tirgon or logs
+                        operationList.RemoveAt(operationList.Count - 1); // Remove from list for scientific calc
+                }
+                else
+                {
+                    if (operationList[operationList.Count - 1].Contains(' ') || operationList[operationList.Count - 1].Contains(',')) // prevents deleting discrepancy with list when using tirgon or logs
+                        operationList.RemoveAt(operationList.Count - 1); // Remove from list for scientific calc
+
+                    count = operationList[operationList.Count - 1].Length;
+                }
+
+                operation = operation.Remove(operation.Length - count, count);
+
+                if (operationList[operationList.Count - 1] == "sen(")
+                    usesTrigonometry = false;
+
+                operationList.RemoveAt(operationList.Count - 1); // Remove from list for scientific calc
+
+                if (operation.EndsWith("^"))
+                    onlySub = true;
+                else if (operation.Length >= 2 && operation[operation.Length - 2] == '√') // Radix
+                    onlySub = true;
+                else if (operation.Length >= 4 && operation[operation.Length - 2] == 'n') // sin
+                    onlySub = true;
+                else if (operation.Length >= 2 && operation[operation.Length - 2] == 's') // cos
+                    onlySub = true;
+                else if (operation.Length >= 4 && operation[operation.Length - 3] == 'a') // tan
+                    onlySub = true;
 
                 if (operation.EndsWith("("))
                     openPar = true;
@@ -203,12 +442,19 @@ namespace XamarCalc.XAML
         private void OnClear(object sender, EventArgs e)
         {
             operation = string.Empty;
+            operationList = new List<string>(); // Wipe the list for scientific calc
             resultText.Text = "0";
 
             possibleDecimal = true;
 
+            onlySub = true;
+
+            usesTrigonometry = false;
+
             openPar = true;
             parenthesis = 0;
+
+            logBase = "10";
 
             resultText.FontSize = 48;
         }
@@ -219,17 +465,36 @@ namespace XamarCalc.XAML
             // expression if the user left some open
             if (parenthesis != 0)
                 for (int x = parenthesis; x != 0; x--)
+                {
                     operation += ")";
+                    operationList.Add(")"); // Add to list for scientific calc
+                    parenthesis -= 1;
+
+                    if (usesTrigonometry && x == 1)
+                    {
+                        Debug.WriteLine("ENTRATO");
+                        operationList.Insert(operationList.Count - 1, " deg");
+                        usesTrigonometry = false;
+                    }
+                    else if (usesLogarithms && x == 1)
+                    {
+                        operationList.Insert(operationList.Count - 1, $",{logBase}");
+                        usesLogarithms = false;
+                    }
+                }
 
             // Add current operation to history list
             history.Add(operation);
 
             // Post on MathJS
-            finalOperation = operation.Replace('÷', '/');
+            finalOperation = String.Concat(operationList);
+            Debug.WriteLine(finalOperation);
+            finalOperation = finalOperation.Replace('÷', '/');
             finalOperation = finalOperation.Replace('×', '*');
-            finalOperation = finalOperation.Replace(',', '.');
+            finalOperation = finalOperation.Replace("𝜋", "pi");
 
             operation = string.Empty;
+            logBase = "10";
 
             Post newPost = new Post()
             {
@@ -249,7 +514,11 @@ namespace XamarCalc.XAML
 
                 Response resp = JsonConvert.DeserializeObject<Response>(jsonResponse);
                 resultText.Text = resp.result.Replace('.', ',');
+
+                resultText.FontSize = 48;
                 operation = resp.result;
+                operationList = new List<string>(); // Wipe list and add the result
+                operationList.Add(resp.result);
             }
             catch (Exception)
             {
@@ -345,5 +614,7 @@ namespace XamarCalc.XAML
             bDec.BackgroundColor = Color.Black;
             bDec.TextColor = Color.White;
         }
+
+
     }
 }

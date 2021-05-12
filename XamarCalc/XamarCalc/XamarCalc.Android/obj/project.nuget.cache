@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v9Th2VZiSZnrPgJkTpsqjnvbWA/A1W+bZjvmwzmt9Ti7bwAufLXJhEWG38cHsuhZg9ufEgmohkyWjGnisOP9nA==",
+  "dgSpecHash": "qw0j4oEYdDQ9d0zCcsZun0ros2SC5aoHKWl+9A4txnMQMw9OcBKvtFLXaiUHpPeTUEwR2MdZ7UFh3wV2sIdEGg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git - Copia\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
+  "projectFilePath": "C:\\Users\\Daniele\\Desktop\\XamarCalc Git\\XamarCalc\\XamarCalc\\XamarCalc.Android\\XamarCalc.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniele\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Daniele\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
