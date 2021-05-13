@@ -25,7 +25,6 @@ namespace XamarCalc.XAML
         char lastChar;
         int fontDecrease = 20;
         int maxCharacters = 22;
-        List<string> history = new List<string>();
 
         bool possibleDecimal = true;
         char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
@@ -47,11 +46,15 @@ namespace XamarCalc.XAML
         static readonly HttpClient client = new HttpClient();
         static string urlPost = "https://api.mathjs.org/v4/";
 
+        History historyClass = new History();
+
         public StandardCalculator()
         {
             AppTheme appTheme = AppInfo.RequestedTheme;
 
             InitializeComponent();
+
+            HistoryListView.ItemsSource = historyClass.HistoryOperation;
 
             // Synchronize with phone's theme
             if (appTheme == AppTheme.Light || appTheme == AppTheme.Unspecified)
@@ -371,7 +374,7 @@ namespace XamarCalc.XAML
         {
             if (operationList.Count > 0)
             {
-                if (operation.Length == 9)
+                if (operation.Length == 9 && resultText.FontSize != 48)
                     resultText.FontSize += fontDecrease;
 
                 if (operation.EndsWith(","))
@@ -483,9 +486,6 @@ namespace XamarCalc.XAML
                     }
                 }
 
-            // Add current operation to history list
-            history.Add(operation);
-
             // Post on MathJS
             finalOperation = String.Concat(operationList);
             Debug.WriteLine(finalOperation);
@@ -493,7 +493,6 @@ namespace XamarCalc.XAML
             finalOperation = finalOperation.Replace('×', '*');
             finalOperation = finalOperation.Replace("𝜋", "pi");
 
-            operation = string.Empty;
             logBase = "10";
 
             Post newPost = new Post()
@@ -516,7 +515,16 @@ namespace XamarCalc.XAML
                 resultText.Text = resp.result.Replace('.', ',');
 
                 resultText.FontSize = 48;
-                operation = resp.result;
+
+                // Add current operation to history list
+                operation += "=" + resp.result;
+
+                // History
+                historyClass.HistoryOperation.Add(operation);
+                historyClass.HistoryListOperation.Add(operationList);
+
+
+                operation = string.Empty;
                 operationList = new List<string>(); // Wipe list and add the result
                 operationList.Add(resp.result);
             }
@@ -615,6 +623,47 @@ namespace XamarCalc.XAML
             bDec.TextColor = Color.White;
         }
 
+        private void OnHistory(object sender, EventArgs e)
+        {
+            HistoryStackLayout.IsVisible = true;
 
+            if (historyClass.HistoryOperation.Count == 0)
+                EmptyHistoryText.IsVisible = true;
+            else
+                EmptyHistoryText.IsVisible = false;
+        }
+
+        private void OnCloseHistory(object sender, EventArgs e)
+        {
+            HistoryStackLayout.IsVisible = false;
+        }
+
+        private void OnTappedHistoryItem(object sender, ItemTappedEventArgs e)
+        {
+            int pos = historyClass.HistoryOperation.IndexOf(((sender as ListView).SelectedItem).ToString());
+
+            operation = historyClass.HistoryOperation[pos];
+            operationList = historyClass.HistoryListOperation[pos]; // Wipe the list for scientific calc
+            operation = operation.Substring(0, operation.IndexOf('=')); //Remove everything after the =
+            resultText.Text = operation;
+
+            Debug.WriteLine(operationList);
+
+            possibleDecimal = true;
+
+            onlySub = true;
+
+            usesTrigonometry = false;
+
+            openPar = true;
+            parenthesis = 0;
+
+            logBase = "10";
+
+            if (operation.Length <= 9)
+                resultText.FontSize = 48;
+
+            HistoryStackLayout.IsVisible = false;
+        }
     }
 }
