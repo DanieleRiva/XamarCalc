@@ -344,6 +344,24 @@ namespace XamarCalc.XAML
 
                 resultText.Text = operation;
             }
+            else if (((Button)sender).Text == "ln")
+            {
+                operation += "ln(";
+                logBase = "e";
+
+
+                openPar = true;
+                parenthesis += 1;
+                usesTrigonometry = false;
+                usesLogarithms = true;
+
+                operationList.Add("log("); // Add to list for scientific cal
+
+                onlySub = true;
+                possibleDecimal = false;
+
+                resultText.Text = operation;
+            }
             else if (((Button)sender).Text == "!" && ((Button)sender).StyleId == "0") // !
             {
                 if (operation.Length == maxCharacters)
@@ -374,6 +392,12 @@ namespace XamarCalc.XAML
         {
             if (operationList.Count > 0)
             {
+                if (operationList[operationList.Count - 1].Contains(','))
+                {
+                    char[] charArr = operationList[operationList.Count - 1].ToCharArray();
+                    logBase = charArr[1].ToString();
+                }
+
                 if (operation.Length == 9 && resultText.FontSize != 48)
                     resultText.FontSize += fontDecrease;
 
@@ -400,19 +424,29 @@ namespace XamarCalc.XAML
                     Debug.WriteLine("Count: " + count);
                     logBase = "10";
 
-                    if (operationList[operationList.Count - 1].Contains(' ') || operationList[operationList.Count - 1].Contains(',')) // prevents deleting discrepancy with list when using tirgon or logs
+                    if (operationList[operationList.Count - 1].Contains(' ') || operationList[operationList.Count - 1].Contains(',')) // prevents deleting discrepancy with list when using trigon or logs
+                        operationList.RemoveAt(operationList.Count - 1); // Remove from list for scientific calc
+                }
+                else if (operationList[operationList.Count - 1].Length > 1 && operationList[operationList.Count - 1].ElementAt(operationList[operationList.Count - 1].Length - 2) == 'g' && logBase == "e") // If ln discrepancy with list
+                {
+                    count = 3;
+                    Debug.WriteLine("Count: " + count);
+                    logBase = "10";
+
+                    if (operationList[operationList.Count - 1].Contains(' ') || operationList[operationList.Count - 1].Contains(',')) // prevents deleting discrepancy with list when using trigon or logs
                         operationList.RemoveAt(operationList.Count - 1); // Remove from list for scientific calc
                 }
                 else
                 {
-                    if (operationList[operationList.Count - 1].Contains(' ') || operationList[operationList.Count - 1].Contains(',')) // prevents deleting discrepancy with list when using tirgon or logs
+                    if (operationList[operationList.Count - 1].Contains(' ') || operationList[operationList.Count - 1].Contains(',')) // prevents deleting discrepancy with list when using trigon or logs
                         operationList.RemoveAt(operationList.Count - 1); // Remove from list for scientific calc
 
+
                     count = operationList[operationList.Count - 1].Length;
-                    Debug.WriteLine(count);
                 }
 
-                operation = operation.Remove(operation.Length - count, count); //
+                //if (operationList[operationList.Count - 1] == "")
+                    operation = operation.Remove(operation.Length - count, count); //
 
                 if (operationList[operationList.Count - 1] == "sen(")
                     usesTrigonometry = false;
