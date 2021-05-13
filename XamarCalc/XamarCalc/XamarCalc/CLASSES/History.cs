@@ -20,13 +20,5 @@ namespace XamarCalc.CLASSES
             HistoryOperation = new ObservableCollection<string>();
             HistoryListOperation = new ObservableCollection<List<string>>();
         }
-
-        public void Stampa()
-        {
-            foreach (var item in HistoryOperation)
-            {
-                Debug.WriteLine(item);
-            }
-        }
     }
 }

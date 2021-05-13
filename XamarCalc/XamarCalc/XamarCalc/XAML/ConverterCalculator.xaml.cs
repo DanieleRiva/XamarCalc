@@ -35,6 +35,8 @@ namespace XamarCalc.XAML
                 LightTheme();
             else if (appTheme == AppTheme.Dark)
                 DarkTheme();
+
+            //tempFromPicker.ItemsSource = {"a","n" };
         }
 
         private void OnChangedType(object sender, EventArgs e)

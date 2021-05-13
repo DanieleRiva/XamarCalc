@@ -48,9 +48,8 @@
 
             <ImageButton x:Name="convertButton" Grid.Column="1" Grid.Row="1" 
                          Source="convertArrow.png" BackgroundColor="LightGray"
-                         BorderColor="Green" BorderWidth="3" WidthRequest="50" HeightRequest="50"
-                         HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnConvert"
-                         IsEnabled="False" IsVisible="False"/>
+                         WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" 
+                         VerticalOptions="Center" Clicked="OnConvert" IsEnabled="False" IsVisible="False"/>
 
             <Entry x:Name="toEntry" Keyboard="Numeric" Grid.Row="0" TextColor="Green"
                    Grid.Column="2" FontSize="20" MaxLength="9" HorizontalTextAlignment="Center"

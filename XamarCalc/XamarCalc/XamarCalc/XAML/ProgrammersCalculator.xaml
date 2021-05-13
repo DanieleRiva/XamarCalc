@@ -3,10 +3,115 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:local="clr-namespace:XamarCalc.CLASSES"
-             x:Class="XamarCalc.XAML.ProgrammersCalculator">
+             x:Class="XamarCalc.XAML.ProgrammersCalculator"
+             Title="Programmatore">
 
-    
+    <Grid x:Name="Grid">
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <Picker x:Name="typePicker" TextColor="Black" Grid.Row="0" Margin="0, 25, 0, 0"
+                HorizontalTextAlignment="Center" FontSize="30"
+                WidthRequest="10" Title="Scegli operatore" SelectedIndexChanged="OnChangedType">
+
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>AND</x:String>
+                    <x:String>OR</x:String>
+                    <x:String>XOR</x:String>
+                    <x:String>NOT</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+
+        </Picker>
+
+        <Grid Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="binaryOne" Keyboard="Numeric"  Grid.Row="0"
+                   Grid.Column="0" FontSize="20" MaxLength="8" HorizontalTextAlignment="Center"
+                   Placeholder="Binario" HorizontalOptions="Fill" Margin="5, 0, 0, 0"
+                   IsVisible="False"/>
+            <Entry x:Name="binaryTwo" Keyboard="Numeric" Grid.Row="0"
+                   Grid.Column="2" FontSize="20" MaxLength="8" HorizontalTextAlignment="Center"
+                   HorizontalOptions="Fill" Margin="0, 0, 5, 0"
+                   IsVisible="False" Placeholder="Binario"/>
+
+            <ImageButton x:Name="convertButton" Grid.Column="1" Grid.Row="1" 
+                         Source="convertBit.png" BackgroundColor="LightGray"
+                         WidthRequest="50" HeightRequest="50"
+                         HorizontalOptions="Center" VerticalOptions="Center"
+                         IsEnabled="True" IsVisible="False" Clicked="OnExecute"/>
+
+            <Entry x:Name="binaryResult" Keyboard="Numeric" Grid.Row="2" TextColor="Green"
+                   Grid.Column="0" FontSize="20" MaxLength="8" HorizontalTextAlignment="Center"
+                   IsReadOnly="True" HorizontalOptions="Fill" Margin="5, 0, 0, 0"
+                   IsVisible="False"/>
+            <Label x:Name="Equals" Text="=" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" 
+                   VerticalOptions="Center" FontSize="36" IsVisible="False"/>
+            <Entry x:Name="decimalResult" Keyboard="Numeric" Grid.Row="2" TextColor="Green"
+                   Grid.Column="2" FontSize="28" MaxLength="8" HorizontalTextAlignment="Center"
+                   IsReadOnly="True" HorizontalOptions="Fill" Margin="0, 0, 5, 0"
+                   IsVisible="False"/>
+
+            <Entry x:Name="binarySingle" Keyboard="Numeric"  Grid.Row="0"
+                   Grid.Column="1" FontSize="20" MaxLength="8" HorizontalTextAlignment="Center"
+                   Placeholder="Binario" HorizontalOptions="Fill" Margin="0, 0, 0, 0"
+                   IsVisible="False"/>
+            <Entry x:Name="singleResult" Keyboard="Numeric" Grid.Row="2" TextColor="Green"
+                   Grid.Column="1" FontSize="28" MaxLength="8" HorizontalTextAlignment="Center"
+                   IsReadOnly="True" HorizontalOptions="Fill" Margin="0, 0, 0, 0"
+                   IsVisible="False"/>
+
+            <Line x:Name="Separator" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Stroke="Green" StrokeThickness="5" X1="1000" VerticalOptions="Center"/>
+
+            <Entry x:Name="fromDec" Keyboard="Numeric" Grid.Row="4" TextColor="Black"
+                   Grid.Column="0" FontSize="20" MaxLength="8" HorizontalTextAlignment="Center"
+                   HorizontalOptions="Fill" Margin="5, 0, 0, 0"
+                   IsVisible="True" Placeholder="Decimale"/>
+            <ImageButton x:Name="fromDecToBinaryButton" Grid.Column="1" Grid.Row="4" 
+                         Source="convertArrow.png" BackgroundColor="LightGray"
+                         WidthRequest="50" HeightRequest="50"
+                         HorizontalOptions="Center" VerticalOptions="Center"
+                         IsEnabled="True" IsVisible="True" Clicked="OnDecToBinary"/>
+            <Entry x:Name="toBinary" Keyboard="Numeric" Grid.Row="4" TextColor="Green"
+                   Grid.Column="2" FontSize="20" MaxLength="8" HorizontalTextAlignment="Center"
+                   HorizontalOptions="Fill" Margin="0, 0, 5, 0"
+                   IsVisible="True" IsReadOnly="True" Placeholder="Binario"/>
+
+            <Entry x:Name="fromBinary" Keyboard="Numeric" Grid.Row="6" TextColor="Black"
+                   Grid.Column="0" FontSize="20" MaxLength="8" HorizontalTextAlignment="Center"
+                   HorizontalOptions="Fill" Margin="5, 0, 0, 0"
+                   IsVisible="True" Placeholder="Binario"/>
+            <ImageButton x:Name="fromBinaryToDecButton" Grid.Column="1" Grid.Row="6" 
+                         Source="convertArrow.png" BackgroundColor="LightGray"
+                         WidthRequest="50" HeightRequest="50"
+                         HorizontalOptions="Center" VerticalOptions="Center"
+                         IsEnabled="True" IsVisible="True" Clicked="OnBinaryToDec"/>
+            <Entry x:Name="toDec" Keyboard="Numeric" Grid.Row="6" TextColor="Green"
+                   Grid.Column="2" FontSize="20" MaxLength="8" HorizontalTextAlignment="Center"
+                   HorizontalOptions="Fill" Margin="0, 0, 5, 0"
+                   IsVisible="True" IsReadOnly="True" Placeholder="Decimale"/>
+
+        </Grid>
+
+    </Grid>
 
 </ContentPage>

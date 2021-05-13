@@ -409,9 +409,10 @@ namespace XamarCalc.XAML
                         operationList.RemoveAt(operationList.Count - 1); // Remove from list for scientific calc
 
                     count = operationList[operationList.Count - 1].Length;
+                    Debug.WriteLine(count);
                 }
 
-                operation = operation.Remove(operation.Length - count, count);
+                operation = operation.Remove(operation.Length - count, count); //
 
                 if (operationList[operationList.Count - 1] == "sen(")
                     usesTrigonometry = false;
@@ -524,9 +525,12 @@ namespace XamarCalc.XAML
                 historyClass.HistoryListOperation.Add(operationList);
 
 
-                operation = string.Empty;
+                operation = resp.result;
                 operationList = new List<string>(); // Wipe list and add the result
-                operationList.Add(resp.result);
+                char[] respCharForList = resp.result.ToCharArray();
+                foreach (var character in respCharForList)
+                    operationList.Add(character.ToString());
+
             }
             catch (Exception)
             {
