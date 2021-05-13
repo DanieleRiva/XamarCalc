@@ -200,7 +200,7 @@
 
             <ListView SeparatorColor="Green" x:Name="HistoryListView" ItemsSource="{Binding HistoryOperation}" ItemTapped="OnTappedHistoryItem"/>
 
-            <Button Text="Chiudi" Clicked="OnCloseHistory" HorizontalOptions="Center" VerticalOptions="End" FontSize="30" Margin="0, 0, 0, 10"/>
+            <Button x:Name="CloseHistoryButton" Text="Chiudi" Clicked="OnCloseHistory" HorizontalOptions="Center" VerticalOptions="End" FontSize="30" Margin="0, 0, 0, 10"/>
 
         </StackLayout>
 

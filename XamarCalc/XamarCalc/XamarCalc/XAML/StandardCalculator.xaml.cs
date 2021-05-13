@@ -535,8 +535,53 @@ namespace XamarCalc.XAML
             }
         }
 
+        private void OnHistory(object sender, EventArgs e)
+        {
+            HistoryStackLayout.IsVisible = true;
+
+            if (historyClass.HistoryOperation.Count == 0)
+                EmptyHistoryText.IsVisible = true;
+            else
+                EmptyHistoryText.IsVisible = false;
+        }
+
+        private void OnCloseHistory(object sender, EventArgs e)
+        {
+            HistoryStackLayout.IsVisible = false;
+        }
+
+        private void OnTappedHistoryItem(object sender, ItemTappedEventArgs e)
+        {
+            int pos = historyClass.HistoryOperation.IndexOf(((sender as ListView).SelectedItem).ToString());
+
+            operation = historyClass.HistoryOperation[pos];
+            operationList = historyClass.HistoryListOperation[pos]; // Wipe the list for scientific calc
+            operation = operation.Substring(0, operation.IndexOf('=')); //Remove everything after the =
+            resultText.Text = operation;
+
+            possibleDecimal = true;
+
+            if (operation == "0")
+                onlySub = true;
+            else
+                onlySub = false;
+
+            usesTrigonometry = false;
+
+            openPar = true;
+            parenthesis = 0;
+
+            logBase = "10";
+
+            if (operation.Length <= 9)
+                resultText.FontSize = 48;
+
+            HistoryStackLayout.IsVisible = false;
+        }
+
         public void LightTheme()
         {
+            // Standard
             Grid.BackgroundColor = Color.White;
             resultText.BackgroundColor = Color.White;
             resultText.TextColor = Color.Green;
@@ -577,10 +622,43 @@ namespace XamarCalc.XAML
             bHistory.BackgroundColor = Color.White;
             bDec.BackgroundColor = Color.White;
             bDec.TextColor = Color.Black;
+
+            // Scientific
+            bSin.BackgroundColor = Color.White;
+            bSin.TextColor = Color.Black;
+            bCos.BackgroundColor = Color.White;
+            bCos.TextColor = Color.Black;
+            bTan.BackgroundColor = Color.White;
+            bTan.TextColor = Color.Black;
+            bPow.BackgroundColor = Color.White;
+            bPow.TextColor = Color.Black;
+            bPowy.BackgroundColor = Color.White;
+            bPowy.TextColor = Color.Black;
+            bSqrt.BackgroundColor = Color.White;
+            bSqrt.TextColor = Color.Black;
+            bLog.BackgroundColor = Color.White;
+            bLog.TextColor = Color.Black;
+            bLog2.BackgroundColor = Color.White;
+            bLog2.TextColor = Color.Black;
+            bLn.BackgroundColor = Color.White;
+            bLn.TextColor = Color.Black;
+            bE.BackgroundColor = Color.White;
+            bE.TextColor = Color.Black;
+            bFatt.BackgroundColor = Color.White;
+            bFatt.TextColor = Color.Black;
+            bPi.BackgroundColor = Color.White;
+            bPi.TextColor = Color.Black;
+
+            // History
+            bHistory.Source = "history.png";
+            HistoryStackLayout.BackgroundColor = Color.White;
+            EmptyHistoryText.TextColor = Color.Black;
+            CloseHistoryButton.TextColor = Color.Black;
         }
 
         public void DarkTheme()
         {
+            // Standard
             Grid.BackgroundColor = Color.Black;
             resultText.BackgroundColor = Color.Black;
             resultText.TextColor = Color.Green;
@@ -621,49 +699,38 @@ namespace XamarCalc.XAML
             bHistory.BackgroundColor = Color.Black;
             bDec.BackgroundColor = Color.Black;
             bDec.TextColor = Color.White;
-        }
 
-        private void OnHistory(object sender, EventArgs e)
-        {
-            HistoryStackLayout.IsVisible = true;
+            // Scientific
+            bSin.BackgroundColor = Color.Black;
+            bSin.TextColor = Color.White;
+            bCos.BackgroundColor = Color.Black;
+            bCos.TextColor = Color.White;
+            bTan.BackgroundColor = Color.Black;
+            bTan.TextColor = Color.White;
+            bPow.BackgroundColor = Color.Black;
+            bPow.TextColor = Color.White;
+            bPowy.BackgroundColor = Color.Black;
+            bPowy.TextColor = Color.White;
+            bSqrt.BackgroundColor = Color.Black;
+            bSqrt.TextColor = Color.White;
+            bLog.BackgroundColor = Color.Black;
+            bLog.TextColor = Color.White;
+            bLog2.BackgroundColor = Color.Black;
+            bLog2.TextColor = Color.White;
+            bLn.BackgroundColor = Color.Black;
+            bLn.TextColor = Color.White;
+            bE.BackgroundColor = Color.Black;
+            bE.TextColor = Color.White;
+            bFatt.BackgroundColor = Color.Black;
+            bFatt.TextColor = Color.White;
+            bPi.BackgroundColor = Color.Black;
+            bPi.TextColor = Color.White;
 
-            if (historyClass.HistoryOperation.Count == 0)
-                EmptyHistoryText.IsVisible = true;
-            else
-                EmptyHistoryText.IsVisible = false;
-        }
-
-        private void OnCloseHistory(object sender, EventArgs e)
-        {
-            HistoryStackLayout.IsVisible = false;
-        }
-
-        private void OnTappedHistoryItem(object sender, ItemTappedEventArgs e)
-        {
-            int pos = historyClass.HistoryOperation.IndexOf(((sender as ListView).SelectedItem).ToString());
-
-            operation = historyClass.HistoryOperation[pos];
-            operationList = historyClass.HistoryListOperation[pos]; // Wipe the list for scientific calc
-            operation = operation.Substring(0, operation.IndexOf('=')); //Remove everything after the =
-            resultText.Text = operation;
-
-            Debug.WriteLine(operationList);
-
-            possibleDecimal = true;
-
-            onlySub = true;
-
-            usesTrigonometry = false;
-
-            openPar = true;
-            parenthesis = 0;
-
-            logBase = "10";
-
-            if (operation.Length <= 9)
-                resultText.FontSize = 48;
-
-            HistoryStackLayout.IsVisible = false;
+            // History
+            bHistory.Source = "historyDark.png";
+            HistoryStackLayout.BackgroundColor = Color.Black;
+            EmptyHistoryText.TextColor = Color.White;
+            CloseHistoryButton.TextColor = Color.White;
         }
     }
 }
