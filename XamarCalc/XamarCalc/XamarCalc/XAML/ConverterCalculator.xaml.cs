@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
@@ -23,6 +24,7 @@ namespace XamarCalc.XAML
         string[] fromPickers = { "1", "3", "5", "7", "9" };
         string[] toPickers = { "2", "4", "6", "8", "10" };
         string operation = string.Empty;
+        List<string> lungList = new List<string>();
 
         public ConverterCalculator()
         {
@@ -35,13 +37,19 @@ namespace XamarCalc.XAML
                 LightTheme();
             else if (appTheme == AppTheme.Dark)
                 DarkTheme();
-
-            //tempFromPicker.ItemsSource = {"a","n" };
+            
+            lungList.Add("km");
+            lungList.Add("hm");
+            lungList.Add("dam");
+            lungList.Add("m");
+            lungList.Add("dm");
+            lungList.Add("cm");
+            lungList.Add("mm");
         }
 
         private void OnChangedType(object sender, EventArgs e)
         {
-            if (typePicker.SelectedItem.ToString() == "Lunghezza")
+            if ((typePicker.SelectedItem.ToString() == "Lunghezza"))
             {
                 fromEntry.IsVisible = false;
                 fromEntry.Text = string.Empty;
@@ -240,7 +248,7 @@ namespace XamarCalc.XAML
                 operation = $"{fromEntry.Text} {from} in {into}";
             }
             else if (typePicker.SelectedItem.ToString() == "Temperatura")
-                operation = $"{fromEntry.Text} deg{tempFromPicker.SelectedItem.ToString().Remove(tempFromPicker.SelectedItem.ToString().Length -1,1)} in deg{tempToPicker.SelectedItem.ToString().Remove(tempToPicker.SelectedItem.ToString().Length - 1, 1)}";
+                operation = $"{fromEntry.Text} deg{tempFromPicker.SelectedItem.ToString().Remove(tempFromPicker.SelectedItem.ToString().Length - 1, 1)} in deg{tempToPicker.SelectedItem.ToString().Remove(tempToPicker.SelectedItem.ToString().Length - 1, 1)}";
 
             Post newPost = new Post()
             {

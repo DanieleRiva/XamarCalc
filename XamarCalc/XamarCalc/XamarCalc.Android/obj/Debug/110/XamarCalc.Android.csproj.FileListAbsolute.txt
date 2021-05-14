@@ -1783,3 +1783,11 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\historydark.png
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\convertbit.png
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\convertbitdark.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\help.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\helpswipe.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\helpmenu.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\helpcalc.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\helpmenu_dark.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\helpcalc_dark.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\header_dark.png
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc.Android\obj\Debug\110\res\drawable\header_dark2.png

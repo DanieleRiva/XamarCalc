@@ -49,3 +49,4 @@ C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\n
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\ref\XamarCalc.dll
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.pdb
 C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XamarCalc.csprojAssemblyReference.cache
+C:\Users\Daniele\Desktop\XamarCalc Git\XamarCalc\XamarCalc\XamarCalc\obj\Debug\netstandard2.0\XAML\HelpPage.xaml.g.cs

@@ -22,7 +22,7 @@
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
 
-            <Image Aspect="AspectFill" Source="header4.jfif" Grid.ColumnSpan="5"
+            <Image x:Name="Header" Aspect="AspectFill" Source="header4.jfif" Grid.ColumnSpan="5"
                    Grid.RowSpan="4"/>
             <Image Source="icon.png" HeightRequest="80" WidthRequest="80"
                    Grid.Column="1" Grid.Row="1" HorizontalOptions="Start"

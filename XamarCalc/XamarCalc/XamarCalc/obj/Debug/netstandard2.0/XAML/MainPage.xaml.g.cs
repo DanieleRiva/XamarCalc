@@ -17,12 +17,12 @@ namespace XamarCalc {
     public partial class MainPage : global::Xamarin.Forms.Shell {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Shell shellName;
+        private global::Xamarin.Forms.Shell ShellName;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
-            shellName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Shell>(this, "shellName");
+            ShellName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Shell>(this, "ShellName");
         }
     }
 }

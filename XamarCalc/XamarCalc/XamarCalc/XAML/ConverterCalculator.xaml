@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:XamarCalc.CLASSES"
              x:Class="XamarCalc.XAML.ConverterCalculator"
              Title="Convertitore">
 
     <Grid x:Name="Grid">
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -56,12 +57,7 @@
                    IsReadOnly="True" HorizontalOptions="Fill" Margin="0, 0, 5, 0"
                    IsVisible="False"/>
 
-            <!--<ImageButton x:Name="convertButton2" Grid.Column="0" Grid.Row="1" 
-                         Source="convertArrow.png" BackgroundColor="Transparent"
-                         BorderColor="Green" BorderWidth="1" WidthRequest="50" HeightRequest="50"
-                         HorizontalOptions="Center" VerticalOptions="Center"/>-->
-
-            <!-- LENGTH PICKERS -->
+            <!--LENGTH PICKERS -->
             <Picker x:Name="lengthFromPicker" StyleId="1" TextColor="Black" Grid.Row="2"
                 HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
                 WidthRequest="10" Margin="5, -100, 0, 0" IsVisible="False" Title="Scegli unità">
@@ -134,8 +130,8 @@
                 </Picker.ItemsSource>
 
             </Picker>
-            
-            <!-- CAPACITY PICKERS -->
+
+            <!-- CAPACITY PICKERS-->
             <Picker x:Name="capacityFromPicker" StyleId="5" TextColor="Black" Grid.Row="2"
                 HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
                 WidthRequest="10" Margin="5, -100, 0, 0" IsVisible="False" Title="Scegli unità">
@@ -210,7 +206,7 @@
                 </Picker.ItemsSource>
 
             </Picker>
-            
+
             <!-- TEMPERATURE PICKERS -->
             <Picker x:Name="tempFromPicker" StyleId="9" TextColor="Black" Grid.Row="2"
                 HorizontalTextAlignment="Center" FontSize="20" SelectedIndexChanged="OnChosenUnit" 
@@ -237,11 +233,11 @@
                 </Picker.ItemsSource>
 
             </Picker>
-            
+
         </Grid>
 
     </Grid>
 
-    
+
 
 </ContentPage>

@@ -116,26 +116,30 @@ namespace XamarCalc.XAML
 
         private void OnDecToBinary(object sender, EventArgs e)
         {
-            if (fromDec.Text.Length > 0 && int.Parse(fromDec.Text) <= 255)
+            try
             {
-                string bin = Convert.ToString(int.Parse(fromDec.Text), 2);
+                if (int.Parse(fromDec.Text) <= 255)
+                {
+                    string bin = Convert.ToString(int.Parse(fromDec.Text), 2);
 
-                if (bin.Length < 8)
-                    for (int i = 8 - bin.Length; i > 0; i--)
-                        toBinary.Text += "0";
+                    if (bin.Length < 8)
+                        for (int i = 8 - bin.Length; i > 0; i--)
+                            toBinary.Text += "0";
 
-                toBinary.Text += bin;
+                    toBinary.Text += bin;
+                }
             }
-            else
-                fromDec.Text = string.Empty;
+            catch (Exception)
+            {
+                fromBinary.Text = string.Empty;
+            }
         }
 
         private void OnBinaryToDec(object sender, EventArgs e)
         {
             try
             {
-                if (fromBinary.Text.Length > 0)
-                    toDec.Text = Convert.ToInt32(fromBinary.Text, 2).ToString();
+                toDec.Text = Convert.ToInt32(fromBinary.Text, 2).ToString();
             }
             catch (Exception)
             {
