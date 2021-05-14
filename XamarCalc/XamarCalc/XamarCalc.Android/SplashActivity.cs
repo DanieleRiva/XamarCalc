@@ -11,7 +11,8 @@ using System.Text;
 
 namespace XamarCalc.Droid
 {
-    [Activity(Label = "XamarCalc", Theme = "@style/SplashTheme", MainLauncher = true, NoHistory = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.ScreenSize, Icon = "@drawable/splashimage")]
+    [Activity(Label = "XamarCalc", Theme = "@style/SplashTheme", MainLauncher = true, NoHistory = true, 
+        ConfigurationChanges = Android.Content.PM.ConfigChanges.ScreenSize, Icon = "@drawable/splashimage")]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

@@ -89,11 +89,11 @@ namespace XamarCalc.XAML
                 return;
             else
             {
-                if (operation.Length == 8)
-                    resultText.FontSize -= fontDecrease;
-
                 if (operation.Length > 0 && !onlySub)
                 {
+                    if (operation.Length == 8)
+                        resultText.FontSize -= fontDecrease;
+
                     lastChar = operation.ElementAt(operation.Length - 1);
 
                     if (lastChar.ToString() != ((Button)sender).Text)
@@ -134,11 +134,11 @@ namespace XamarCalc.XAML
                 return;
             else
             {
-                if (operation.Length == 8)
-                    resultText.FontSize -= fontDecrease;
-
                 if (possibleDecimal)
                 {
+                    if (operation.Length == 8)
+                        resultText.FontSize -= fontDecrease;
+
                     if (operation.Length > 0)
                     {
                         lastChar = operation.ElementAt(operation.Length - 1);
@@ -205,7 +205,6 @@ namespace XamarCalc.XAML
                         openPar = true;
                     if (parenthesis == degPar && usesTrigonometry)
                     {
-                        Debug.WriteLine("ENTRATO");
                         operationList.Insert(operationList.Count - 1, " deg");
                         usesTrigonometry = false;
                     }
