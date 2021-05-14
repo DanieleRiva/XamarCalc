@@ -21,12 +21,12 @@ namespace XamarCalc
 
         private void LightTheme()
         {
-            ShellName.BackgroundColor = Color.White;
+            ShellName.FlyoutBackgroundColor = Color.White;
         }
 
         private void DarkTheme()
         {
-            
+            ShellName.FlyoutBackgroundColor = Color.DarkGray;
         }
     }
 }

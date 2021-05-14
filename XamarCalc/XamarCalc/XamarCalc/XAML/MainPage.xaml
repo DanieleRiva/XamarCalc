@@ -4,7 +4,7 @@
        xmlns:local="clr-namespace:XamarCalc.XAML"
        x:Name="ShellName"
        x:Class="XamarCalc.MainPage"
-       FlyoutBackgroundColor="DarkGray">
+       FlyoutBackgroundColor="White">
 
     <Shell.FlyoutHeader>
         <local:HeaderContentView/>

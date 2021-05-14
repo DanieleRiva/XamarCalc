@@ -1,1 +1,1 @@
-<resources><color name="launcher_background">#FFFFFF</color><color name="colorPrimary">#805cec</color><color name="colorPrimaryDark">#805cec</color><color name="colorAccent">#FF4081</color></resources>
+<resources><color name="launcher_background">#FFFFFF</color><color name="colorPrimary">#805cec</color><color name="colorPrimaryDark">#805cec</color><color name="colorAccent">#FF4081</color><color name="splash_background">@android:color/black</color></resources>
